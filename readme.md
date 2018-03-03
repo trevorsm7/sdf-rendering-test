@@ -1,9 +1,8 @@
 # SDF Rendering Test
 
-This is a test I wrote to experiment with signed distance field rendering. I made SDF functions for a circle and for a square and wrote a shader to shade it at different steps. I noticed that when overflowing the numbers, it made interesting patterns, so I played with animating it a bit.
+This is a test I wrote to experiment with signed distance field rendering. I made SDF functions for a circle and for a square and wrote a shader to color it in different ranges. I noticed that when allowing the distance function to overflow, it made interesting patterns, so I added animation to the radius parameter.
 
 ![screenshot1](screenshot1.jpg)
-![screenshot2](screenshot2.jpg)
 
 ## Building
 
@@ -19,6 +18,8 @@ cmake ..
 cmake --build . --target install
 ```
 
+![screenshot2](screenshot2.jpg)
+
 ## Controls
 
 Drag with mouse to rotate view. Scroll to zoom in/out.
@@ -26,7 +27,7 @@ Drag with mouse to rotate view. Scroll to zoom in/out.
 - *Draw Circle* - toggle between circle/square SDF
 - *Bilinear Filter* - toggle bilinear/nearest sampling
 - *SDF Shader* - toggle SDF/grayscale shader
-- *Tex Pow* - 2^pow factor applied to radius
+- *Tex Pow* - resolution (2^pow x 2^pow) of the texture
 - *Radius* - the computed radius for the shape function
 
 ## Authors
